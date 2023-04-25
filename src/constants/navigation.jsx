@@ -9,23 +9,26 @@ import {
 	HiOutlineCog
 } from 'react-icons/hi'
 
+import { ReactComponent as BatteryIcon } from '../assets/icon-battery.svg'
+import { ReactComponent as DCVoltageIcon } from '../assets/icon-voltage.svg'
+
 export const DASHBOARD_SIDEBAR_LINKS = [
 	{
 		key: '1',
-		label: 'Voltage Drop Calculator',
+		label: 'Voltage Drop',
 		path: '/',
-		icon: <HiOutlineViewGrid />
+		icon: <DCVoltageIcon/>
 	},
 	{
-		key: 'products',
-		label: 'Products',
-		path: '/products',
-		icon: <HiOutlineCube />
+		key: '2',
+		label: 'Battery Autonomy',
+		path: '/battery',
+		icon: <BatteryIcon/>
 	},
 	{
-		key: 'orders',
-		label: 'Orders',
-		path: '/orders',
+		key: '3',
+		label: 'Wire Size',
+		path: '/wire',
 		icon: <HiOutlineShoppingCart />
 	},
 	{

@@ -10,7 +10,7 @@ const linkClass =
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col bg-neutral-900 md:w-[400px] text-white ">
+    <div className="flex flex-col bg-neutral-900 md:min-w-[300px] text-white ">
       <div className="flex items-center gap-2 px-1 py-3">
         <FcBullish />
         <span className="text-neutral-100 text-lg">shop</span>
@@ -37,7 +37,9 @@ const Sidebar = () => {
 
 function SidebarLink({ link }) {
   const { pathname } = useLocation();
-  return (
+  return (<>
+  
+
     <Link
       to={link.path}
       className={classNames(
@@ -48,8 +50,11 @@ function SidebarLink({ link }) {
       )}
     >
       <span className="text-xl">{link.icon}</span>
+      {/* <img className="fill-slate-100"  src={link.icon} alt="" /> */}
       {link.label}
     </Link>
+  
+    </>
   );
 }
 
